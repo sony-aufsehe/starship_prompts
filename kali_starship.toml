@@ -1,0 +1,62 @@
+add_newline = true
+
+format = """
+[┌─ $shell[$username](brown)$hostname $time](bold blue)
+[│](bold blue)$directory$git_status$rust$package$python
+[└─>$character](bold blue)"""
+
+[character]
+success_symbol = "[⚡](bold green) "
+error_symbol = "[❌](bold red) "
+
+[aws]
+disabled = true
+
+[time]
+disabled = false
+
+[cmd_duration]
+disabled = true
+
+[directory]
+truncation_length = 8
+
+[hostname]
+disabled = false
+ssh_only = false
+format = "on [$hostname](bold brown)"
+
+
+[nodejs]
+symbol = "🤢"
+
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+disabled = false
+
+[git_status]
+conflicted = "🚩"
+ahead = "💨"
+behind = "😰"
+diverged = "😵"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "💥"
+
+[shell]
+fish_indicator = "🦈"
+bash_indicator = "🌞"
+powershell_indicator = "💻"
+disabled = false
+
+[username]
+disabled = false
+show_always =true
+style_root = "red bold"
+style_user = "purple bold"
+format = "[$user]($style) "
